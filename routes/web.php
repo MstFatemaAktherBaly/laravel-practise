@@ -21,3 +21,7 @@ Route::get('/', [PostController::class, 'home'])->name('home');
 Route::get('/posts', [PostController::class, 'allposts'])->name( 'posts' );
 
 Route::post('/store', [PostController::class, 'storePost'] )->name('store');  //add a new post
+
+Route::get('/edit{id}', [PostController::class,'postEdit']) -> name('edit');
+
+Route::get('/delete/{id}' ,[PostController::class, 'deletePost'] ) -> name ('delete') ;
